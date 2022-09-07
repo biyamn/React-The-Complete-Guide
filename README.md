@@ -1,4 +1,4 @@
-### 🧃 UDEMY에서 'React 완벽 가이드 with Redux, Next.js, TypeScript' 강의를 듣고 학습
+### 🧃 UDEMY에서 `React 완벽 가이드 with Redux, Next.js, TypeScript` 강의를 듣고 학습
 
 <br>
 
