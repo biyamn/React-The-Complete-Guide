@@ -46,17 +46,18 @@
 ```jsx
 import {useState} from 'react';
 
-let [state, setState] = useState('State'); // ES6 destructuring
+const [state, setState] = useState('State'); // ES6 destructuring
 ```
 
 ### State 사용 방법은?
 
 1. import { useState }
 2. useState(보관할 자료)
-3. let[작명, 작명]
+3. const [작명, 작명]
+    - const를 쓰는 이유: let을 사용하면 a=100과 같은 변수 형식의 할당이 가능해지기 때문에 이를 방지하고 setState를 사용한 변수 변경만을 허락하기 위해서 const로 선언(const로 선언하면 변수 형태의 재할당을 막을 수 있기 때문에)
 
 ```jsx
-let [a, b] = useState('남자 코트 추천');
+const [a, b] = useState('남자 코트 추천');
 ```
 
 여기서 a는 state에 보관했던 자료 . (구조분해할당)
@@ -64,7 +65,7 @@ let [a, b] = useState('남자 코트 추천');
 보통 아래처럼 쓰는 것 같다.([이름, set이름] 이렇게)
 
 ```jsx
-let [title, setTitle] = useState('남자 코트 추천');
+const [title, setTitle] = useState('남자 코트 추천');
 ```
 
 ### 예시)
