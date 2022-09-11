@@ -43,6 +43,7 @@ const ExpenseForm = () => {
     // submit되어도 페이지 새로고침 X. 원래는 그게 자동임
     event.preventDefault();
 
+    // 이 expenseData를 NewExpense 컴포넌트에 위로 전달할 것임.
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
