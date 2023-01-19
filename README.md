@@ -1,5 +1,5 @@
-## 1. 강의 `React The Complete Guide` 수강!
-#### 유데미에서 강의 `React The Complete Guide`를 학습하고 기록
+## 1. 강의 `React The Complete Guide` 수강
+#### 유데미에서 강의 `React The Complete Guide`를 학습하고 기록합니다.
 
 <br>
 
