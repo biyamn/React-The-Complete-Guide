@@ -1,0 +1,265 @@
+# class
+
+- 클래스는 리액트에서 컴포넌트를 생성할 때 사용된다(컴포넌트를 생성하는 두 방법 중 하나. 클래스로 만드는 컴포넌트 / 함수로 만드는 컴포넌트)
+    - 컴포넌트: React 컴포넌트는 페이지에 렌더링할 React 엘리먼트를 반환하는 작고 재사용 가능한 코드 조각
+    - 엘리먼트: React 엘리먼트(React Element)는 React 애플리캐이션을 구성하는 블록
+- 클래스는 class 키워드로 정의된다.
+- 프로퍼티와 메소드를 가질 수 있다.
+    
+    ```jsx
+    class Person {
+    	name = 'Max'           // 프로퍼티
+    	call = () => {...}     // 메소드
+    }
+    ```
+    
+    - 프로퍼티: 클래스에 정의한 변수
+    - 메소드: 클래스에 정의한 함수
+- 클래스로 자바스크립트 객체를 생성할 수 있다.
+- 상속: 다른 클래스에 있는 프로퍼티와 메소드를 상속하면 잠재적으로 새로운 프로퍼티와 메소드를 추가한다는 뜻
+    
+    ```jsx
+    class Person extends Master
+    ```
+    
+
+### class 예제 (1) (ES6)
+
+```jsx
+class Person {
+  constructor() {
+    this.name = 'Max';
+  }
+  
+  printMyName() {
+    console.log(this.name);
+  }
+}
+
+const person = new Person(); // 객체를 만든다
+person.printMyName(); // Max
+```
+
+### class 예제 (2) (ES6)
+
+```jsx
+class Human {
+  constructor() {
+    this.gender = 'male';
+  }
+  printGender() {
+    console.log(this.gender);
+  }
+}
+
+class Person extends Human{
+  constructor() {
+    super();
+    this.name = 'Max';
+    this.gender = 'female'
+  }
+  
+  printMyName() {
+    console.log(this.name);
+  }
+}
+
+const person = new Person();
+person.printMyName(); // 'Max'
+person.printGender(); // 'female'
+```
+
+---
+
+# 차세대 자바스크립트의 class
+
+## 1) 프로퍼티
+
+### ES6(이전)
+
+```jsx
+constructor() {
+ this.myProperty = 'value';
+}
+```
+
+### ES7(이후)
+
+```jsx
+myProperty = 'value'
+```
+
+## 2) 메서드
+
+### ES6(이전)
+
+```jsx
+myMethod() {...}
+```
+
+### ES7(이후)
+
+```jsx
+myMethod = () => {...}
+```
+
+## class 예제(ES7)
+
+```jsx
+class Human {
+    gender = 'male';
+    printGender = () => {
+    console.log(this.gender);
+  }
+}
+
+class Person extends Human {
+    name = 'Max';
+    gender = 'female'
+  
+  
+    printMyName = () => {
+    console.log(this.name);
+  }
+}
+const person = new Person();
+person.printMyName(); // 'Max'
+person.printGender(); // 'female'
+```
+
+---
+
+# 모던 자바스크립트 - class
+
+<aside>
+💡 모던 자바스크립트 클래스 부분: [https://ko.javascript.info/class](https://ko.javascript.info/class)
+
+</aside>
+
+강의만으로 class를 이해하기에는 힘들 것 같아 모던 자바스크립트에서 class 파트를 공부해보기로 했다. 
+
+## class란?
+
+클래스는 객체 지향 프로그래밍에서 특정 객체를 생성하기 위해 변수와 메서드를 정의하는 일종의 틀로, 객체를 정의하기 위한 상태(맴버 변수)와 메서드(함수)로 구성된다. 
+
+## class 호출시 일어나는 과정
+
+```jsx
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+
+  sayHi() {
+    alert(this.name);
+  }
+}
+
+let user = new User("John");
+user.sayHi(); // John이 alert됨
+```
+
+1. 새로운 객체가 생성된다
+2. 넘겨받은 인수와 함께 `constructor`가 자동으로 실행된다. 이때 인수 `"John"`이 `this.name`에 할당된다.
+3. 이런 과정을 거친 후에 `user.sayHi()`같은 객체 메서드를 호출할 수 있다.
+
+## 자바스크립트에서 클래스는 함수!
+
+```jsx
+class User {
+  constructor(name) { this.name = name; }
+  sayHi() { alert(this.name); }
+}
+
+// User가 함수라는 증거
+alert(typeof User); // function
+```
+
+1. `User`라는 이름을 가진 함수를 만든다. 함수 본문은 생성자 메서드 `constructor`에서 가져온다. 생성자 메서드가 없으면 본문이 비워진 채로 함수가 만들어진다.
+2. `sayHi`같은 클래스 내에서 정의한 메서드를 `User.prototype`에 저장한다.
+
+---
+
+# 클래스
+
+- 선언
+    
+    ```jsx
+    class Person {
+    	name = 'Max' // 프로퍼티
+    	call = () => {...} // 메서드
+    }
+    ```
+    
+
+- 사용법
+    
+    ```jsx
+    const myPerson = new Person()
+    	myPerson.call()
+    
+    console.log(myPerson.name)
+    ```
+    
+
+- 상속
+    
+    ```jsx
+    class Person extends Master
+    ```
+    
+
+- 같은 의미(class, 화살표 함수)
+    - class version
+        
+        ```jsx
+        class Human {
+           constructor() {
+             this.gender = 'male';
+           }
+           
+           printGender() {
+             console.log(this.gender);
+           }
+         }
+        
+        class Person extends Human {
+          constructor() {
+            super();
+            this.name = 'Max';
+            this.gender = 'female';
+          }
+          
+          printMyName() {
+            console.log(this.name);
+          }
+        }
+        
+        const person = new Person();
+        person.printMyName(); // "Max"
+        person.printGender(); // "female"
+        ```
+        
+    - 화살표 함수 version
+        
+        ```jsx
+        class Human {
+           gender = 'male';
+           printGender = () => {
+             console.log(this.gender);
+           }
+         }
+        
+        class Person extends Human {
+            name = 'Max';
+            gender = 'female';
+          
+          printMyName = () => {
+            console.log(this.name);
+          }
+        }
+        
+        const person = new Person();
+        person.printMyName(); // "Max"
+        person.printGender(); // "female"
+        ```
