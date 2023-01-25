@@ -1,0 +1,8 @@
+.profiles {
+  background-color: rgb(255, 69, 116);
+  height : 200px;
+  display : flex;
+  justify-content : center;
+  align-items : center;
+}
+
