@@ -5,22 +5,23 @@
   align-items: center;
   width: 5.5rem;
   height: 5.5rem;
-  background-color: #fc9ca7;
+  background-color: #fe7d6a;
   color: white;
   border: 5px solid white;
   border-radius: 12px;
 }
 
 .expense-date__month {
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
 .expense-date__year {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 
 .expense-date__day {
-  font-size: 1.5rem;
+  margin-top: -1px;
+  font-size: 1.3rem;
   font-weight: bold;
 }
