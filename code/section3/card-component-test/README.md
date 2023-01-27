@@ -1,9 +1,10 @@
-## 폴더 설명
-섹션 3 - 43. 컴포지션"의 개념("children prop")을 듣고 개인적으로 합성 컴포넌트(Card.js)를 만드는 실습을 하기 위해 만든 폴더입니다. 
+# 폴더 설명
+섹션 3 - 43. 컴포지션"의 개념("children prop")을 듣고 children 개념을 이해하기 위해 개인적으로 실습을 한 곳입니다.
 
 <br>
 
-## 코드 설명
+# 코드 설명
+## 실습 1
 합성 컴포넌트로 만들 Card.js에는 아래와 같은 속성이 있다. 테두리를 둥글게 하는 속성/그림자 속성/마진 속성을 공통으로 갖는 부분에 이 Card 컴포넌트를 쓸 것이다. 
 
 ```jsx
@@ -92,7 +93,47 @@ function Card(props) {
 export default Card;
 ```
 
+### 결과
+컴포넌트를 잘 나눴고, 합성 컴포넌트인 Card도 만들어 정상적으로 화면에 표시했다.
+![d](https://user-images.githubusercontent.com/101965666/214580032-f1e8cf61-c0b6-40cb-be87-d271c79128f6.PNG)
+
 <br>
 
-## 최종 화면
-![d](https://user-images.githubusercontent.com/101965666/214580032-f1e8cf61-c0b6-40cb-be87-d271c79128f6.PNG)
+<hr>
+
+## 실습 2
+조금 더 단순하게 생각할 수 있는 예시로 실습을 해보기로 했다. App.js에 Hamster라는 컴포넌트를 추가하고, 안에 h1 태그와 p태그를 써줬다. 이렇게 단순하게 해도 Hamster는 래퍼 컴포넌트가 된다.
+
+```jsx
+// App.js
+<Hamster>
+  <h1>hamham</h1>
+  <p>zikzik</p>
+</Hamster>
+```
+
+그리고 Hamster 컴포넌트 안에는 그저 이 컴포넌트 안에 있는 것을 화면에 표시하도록 리턴문 안에 `{props.children}` 을 써주었다. 
+
+```jsx
+const Hamster = (props) => {
+  console.log(props)
+  console.log(props.children)
+  return (
+    <div>
+      {props.children}
+    </div>
+    )
+}
+
+export default Hamster;
+```
+
+콘솔로 찍은 결과는 다음과 같다. props에는 children이 있다. 그리고 children에는 h1태그와 p태그가 있다.
+
+![캡처](https://user-images.githubusercontent.com/101965666/215016727-a7498e22-6bd6-46c8-a3b1-138598ef6973.PNG)
+
+## 결과
+결과 화면은 아래와 같다. 정상적으로 화면에 출력되었다! 래퍼 컴포넌트 안에 다른 컴포넌트가 있을 때만 children을 쓰는 줄 알았는데, 그게 아니라 컴포넌트를 포함한 모든 요소가 래퍼 컴포넌트 안에 있다면 이를 표시하기 위해 `{props.children}`을 쓰는 거라는 것을 알게되었다.
+
+
+![캡처](https://user-images.githubusercontent.com/101965666/215016535-a01dd0fc-f077-4ffa-85e9-b939cc97e74f.PNG)
