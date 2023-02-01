@@ -1,5 +1,5 @@
 .new-expense {
-  background-color: #a892ee;
+  background-color: #fdab9f;
   padding: 1rem;
   margin: 2rem auto;
   width: 50rem;
@@ -10,11 +10,11 @@
 }
 
 .new-expense button {
-  font: inherit;
+  font-size: 1.1rem;
   cursor: pointer;
   padding: 1rem 2rem;
-  border: 1px solid #40005d;
-  background-color: #40005d;
+  border: 3.5px solid #ffffff;
+  background-color: rgb(254, 93, 117);
   color: white;
   border-radius: 12px;
   margin-right: 1rem;
