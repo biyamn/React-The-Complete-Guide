@@ -49,7 +49,8 @@
 ### 입력 폼 생성
 form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송하는 컴포넌트를 생성하였습니다. 그리고 하위 컴포넌트에 있는 데이터를 상위 컴포넌트로 끌어올리는 작업을 하였습니다.
 
-![캡처](https://user-images.githubusercontent.com/101965666/216073347-6541fb8b-53f4-4c48-9adf-3e469f058b2d.PNG)
+![캡처](https://user-images.githubusercontent.com/101965666/216322672-d3944bcd-d3da-4cd4-92b7-f59ca9192ee9.PNG)
+
 
 ### 학습 내용 정리
 1. <a href='https://faceted-dash-136.notion.site/4-9175a80cb1d74656bf6343b8aee30ea5'>이벤트 핸들러</a>
