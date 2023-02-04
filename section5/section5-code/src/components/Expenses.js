@@ -5,17 +5,23 @@ import ExpensesFilter from "./ExpensesFilter";
 import { useState } from 'react';
 
 const Expenses = (props) => {
-  const [year, setYear] = useState('2020');
+  const [month, setmonth] = useState('1');
 
-  const saveYearHandler = (selectedYear) => {
-    setYear(selectedYear);
+  const savemonthHandler = (selectedmonth) => {
+    setmonth(selectedmonth);
   }
+
+  const filtered = props.items.filter((expense) => {
+    return (
+      (expense.date.getMonth() + 1).toString() === month
+    )
+  })
 
   return (
     <div>
       <Card className='expenses'>
-        <ExpensesFilter selected={year} onSaveYearHandler={saveYearHandler} />
-        {props.items.map((expense) => (
+        <ExpensesFilter selected={month} onSavemonthHandler={savemonthHandler} />
+        {filtered.map((expense) => (
           <ExpenseItem 
             title={expense.title} 
             amount={expense.amount} 
