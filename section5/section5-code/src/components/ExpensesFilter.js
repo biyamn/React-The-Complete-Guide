@@ -11,7 +11,7 @@ const ExpensesFilter = (props) => {
   return (
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
-        <label>Filter by month</label>
+        <label>달 별로 필터링하기</label>
         <select value={props.selected} onChange={handleChangeSelect}>
           <option value='1'>1월</option>
           <option value='2'>2월</option>

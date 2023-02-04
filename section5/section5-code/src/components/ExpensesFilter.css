@@ -12,8 +12,8 @@
 }
 
 .expenses-filter label {
-  font-weight: bold;
   margin-bottom: 0.5rem;
+  font-size: 1.4rem;
 }
 
 .expenses-filter select {
