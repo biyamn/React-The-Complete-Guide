@@ -21,14 +21,18 @@ const Expenses = (props) => {
     <div>
       <Card className='expenses'>
         <ExpensesFilter selected={month} onSavemonthHandler={savemonthHandler} />
-        {filtered.map((expense) => (
-          <ExpenseItem 
-            title={expense.title} 
-            amount={expense.amount} 
-            date={expense.date} 
-            key={expense.id}
-          />
-        ))}
+        {filtered.length === 0 ? (
+          <p>지출이 없습니다.</p>
+        ) : (
+          filtered.map((expense) => (
+            <ExpenseItem 
+              title={expense.title} 
+              amount={expense.amount} 
+              date={expense.date} 
+              key={expense.id}
+            />
+          ))
+        )}
       </Card>
     </div>
   )
