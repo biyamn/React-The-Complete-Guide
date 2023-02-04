@@ -57,3 +57,9 @@ form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송
 2. <a href='https://faceted-dash-136.notion.site/4-State-f3a121897c5c4ad59558f1fc96211f07'>State</a>
 3. <a href='https://faceted-dash-136.notion.site/4-Form-dda8aaed817f4e35983c3d8eec50f709'>Form</a>
 4. <a href='https://faceted-dash-136.notion.site/4-65e1c40513f24609b5b42db64f3294bd'>하드트레이닝</a>
+
+<br>
+
+## ✨ 섹션 5
+### 학습 내용 정리
+1. <a href='https://faceted-dash-136.notion.site/5-map-keys-filter-04461b1c04f44baba244c343a76067f7'>map(), keys, filter()</a>
