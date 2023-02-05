@@ -20,35 +20,6 @@ const ExpenseForm = (props) => {
     setEnteredDate(e.target.value);
   }
   
-  // 한 개의 state를 사용하는 방법
-  // const [userInput, setUserInput]= useState({
-  //   enteredTitle: '',
-  //   enteredAmount: '',
-  //   enteredDate: '',
-  // });
-
-  // 한 개의 state를 사용하는 방법 - 항상 최신의 상태를 유지하는 좋은 방법
-  // const titleChangeHandler = (e) => {
-  //   setEnteredTitle((prevState) => {
-  //     return { ...prevState, enteredTitle: e.target.value};
-  //   )};
-  // }
-
-  // 한 개의 state를 사용하는 방법 - 특정 상황에서 문제가 될 수 있는 방법
-  // const amountChangehandler = (e) => {
-  //   setEnteredAmount({
-  //     ...userInput,
-  //     enteredAmount: e.target.value
-  // });
-  // }
-
-  // const dateChangehandler = (e) => {
-  //   setEnteredDate({
-  //     ...userInput,
-  //     enteredDate: e.target.value
-  //   });
-  // }
-
   const submitHandler = (event) => {
     event.preventDefault();
 
@@ -63,6 +34,12 @@ const ExpenseForm = (props) => {
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
+
+    props.setIsAddNewExpense(!props.isAddNewExpense)
+  }
+
+  const cancelSubmit = () => {
+    props.setIsAddNewExpense(!props.isAddNewExpense)
   }
 
   return (
@@ -82,6 +59,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className='new-expense__actions'>
+        <button type='button' onClick={cancelSubmit}>취소하기</button>
         <button type='submit'>등록하기</button>
       </div>
     </form>
