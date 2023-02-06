@@ -1,10 +1,9 @@
 import './NewExpense.css';
 import ExpenseForm from './ExpenseForm';
 import { useState } from 'react';
-import AddNewExpenseForm from './AddNewExpenseForm';
 
 const NewExpense = (props) => {
-  const [isAddNewExpense, setIsAddNewExpense] = useState(true);
+  const [isEditing, setIsEditing] = useState(false);
 
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
@@ -12,14 +11,25 @@ const NewExpense = (props) => {
       id: Math.random().toString()
     };
     props.onAddExpense(expenseData);
+    setIsEditing(true);
+  }
+
+  const startEditingHandler = () => {
+    setIsEditing(true);
+  }
+
+  const stopEditingHandler = () => {
+    setIsEditing(false);
   }
 
   return (
     <div className='new-expense'>
-      { isAddNewExpense ? 
-      <AddNewExpenseForm isAddNewExpense={isAddNewExpense} setIsAddNewExpense={setIsAddNewExpense} />
-      : <ExpenseForm isAddNewExpense={isAddNewExpense} setIsAddNewExpense={setIsAddNewExpense} onSaveExpenseData={saveExpenseDataHandler} /> 
-      }
+      {!isEditing && <button onClick={startEditingHandler}>새롭게 추가하기</button>}
+      {isEditing && 
+        <ExpenseForm 
+          onSaveExpenseData={saveExpenseDataHandler} 
+          onCancel={stopEditingHandler} 
+        />} 
     </div>
   )
 };

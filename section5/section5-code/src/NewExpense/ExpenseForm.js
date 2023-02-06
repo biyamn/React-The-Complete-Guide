@@ -34,12 +34,6 @@ const ExpenseForm = (props) => {
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
-
-    props.setIsAddNewExpense(!props.isAddNewExpense)
-  }
-
-  const cancelSubmit = () => {
-    props.setIsAddNewExpense(!props.isAddNewExpense)
   }
 
   return (
@@ -59,7 +53,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className='new-expense__actions'>
-        <button type='button' onClick={cancelSubmit}>취소하기</button>
+        <button type='button' onClick={props.onCancel}>취소하기</button>
         <button type='submit'>등록하기</button>
       </div>
     </form>
