@@ -1,14 +1,15 @@
-import { useState } from 'react';
 import Card from "../UI/Card";
 import './Expenses.css';
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
+import ExpensesChart from "./ExpensesChart";
+import { useState } from 'react';
 
 const Expenses = (props) => {
   const [month, setmonth] = useState('1');
 
-  const savemonthHandler = (selectedmonth) => {
-    setmonth(selectedmonth);
+  const saveMonthHandler = (selectedMonth) => {
+    setmonth(selectedMonth);
   }
 
   const filtered = props.items.filter((expense) => {
@@ -22,8 +23,9 @@ const Expenses = (props) => {
       <Card className='expenses'>
         <ExpensesFilter 
           selected={month} 
-          onSavemonthHandler={savemonthHandler} 
+          onSaveMonthHandler={saveMonthHandler} 
         />
+        <ExpensesChart expenses={filtered} />
         <ExpensesList items={filtered} />
       </Card>
     </div>

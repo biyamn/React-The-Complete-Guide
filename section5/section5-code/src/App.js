@@ -25,7 +25,7 @@ const DUMMY_EXPENSES = [
     id: 'e4', 
     title: '중고 아이패드', 
     amount: 300000, 
-    date: new Date(2023, 5, 1) },
+    date: new Date(2023, 5, 30) },
   {
     id: 'e5',
     title: '쌀',
@@ -42,7 +42,7 @@ const DUMMY_EXPENSES = [
     id: 'e7', 
     title: '중고 아이패드', 
     amount: 300000, 
-    date: new Date(2023, 8, 1) },
+    date: new Date(2023, 8, 11) },
   {
     id: 'e8',
     title: '쌀',
@@ -59,7 +59,7 @@ const DUMMY_EXPENSES = [
     id: 'e10', 
     title: '중고 아이패드', 
     amount: 300000, 
-    date: new Date(2023, 4, 1) },
+    date: new Date(2023, 4, 22) },
   {
     id: 'e11',
     title: '쌀',
@@ -76,7 +76,7 @@ const DUMMY_EXPENSES = [
     id: 'e13', 
     title: '중고 아이패드', 
     amount: 300000, 
-    date: new Date(2023, 6, 1) },
+    date: new Date(2023, 6, 17) },
   {
     id: 'e14',
     title: '쌀',
@@ -93,7 +93,7 @@ const DUMMY_EXPENSES = [
     id: 'e16', 
     title: '중고 아이패드', 
     amount: 300000, 
-    date: new Date(2023, 3, 1) },
+    date: new Date(2023, 3, 15) },
   {
     id: 'e17',
     title: '쌀',
@@ -116,7 +116,7 @@ const DUMMY_EXPENSES = [
     id: 'e20', 
     title: '중고 아이패드', 
     amount: 300000, 
-    date: new Date(2023, 12, 1) },
+    date: new Date(2023, 12, 2) },
   {
     id: 'e21',
     title: '볼펜',
@@ -127,7 +127,7 @@ const DUMMY_EXPENSES = [
     id: 'e22', 
     title: '중고 아이패드', 
     amount: 300000, 
-    date: new Date(2023, 1, 1) },
+    date: new Date(2023, 1, 25) },
   {
     id: 'e23',
     title: '볼펜',

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const AddNewExpenseForm = (props) => {
   const changeState = () => {
     props.setIsAddNewExpense(!props.isAddNewExpense)

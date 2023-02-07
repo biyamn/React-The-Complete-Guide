@@ -1,11 +1,11 @@
 import './ExpensesFilter.css';
 
 const ExpensesFilter = (props) => {
-  let selectedmonth;
+  let selectedMonth;
 
   const handleChangeSelect = (e) => {
-    selectedmonth = e.target.value;
-    props.onSavemonthHandler(selectedmonth);
+    selectedMonth = e.target.value;
+    props.onSaveMonthHandler(selectedMonth);
   }
 
   return (
