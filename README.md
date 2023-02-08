@@ -75,3 +75,8 @@ form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송
 ### 학습 내용 정리
 1. <a href='https://faceted-dash-136.notion.site/5-map-keys-filter-04461b1c04f44baba244c343a76067f7'>map(), keys, filter()</a>
 2. <a href='https://faceted-dash-136.notion.site/5-eb54a484098b4a688aa876f93d218efb'>조건부 내용</a>
+
+<br>
+
+## ✨ 섹션 6
+### 학습 내용 정리
