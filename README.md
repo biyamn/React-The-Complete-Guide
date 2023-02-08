@@ -25,7 +25,7 @@
 
 ## ✨ 섹션 3
 ### 컴포넌트 분리
-아래와 같이 컴포넌트를 나누었다. Expenses, ExpenseItem, ExpenseDate 컴포넌트를 생성하였고 합성 컴포넌트 Card를 생성하여 Expenses, ExpenseItem에 적용하였습니다.
+아래와 같이 컴포넌트를 나누었습니다. Expenses, ExpenseItem, ExpenseDate 컴포넌트를 생성하였고 합성 컴포넌트 Card를 생성하여 Expenses, ExpenseItem에 적용하였습니다.
 
 <img src='https://user-images.githubusercontent.com/101965666/214746208-02063c4a-abc9-41c5-b5ad-f49455f30441.png' width='600'>
 
@@ -61,6 +61,17 @@ form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송
 <br>
 
 ## ✨ 섹션 5
+### 차트 생성 및 '새롭게 추가하기', '취소하기' 버튼 생성
+일별로 지출한 금액을 시각화하는 차트를 생성하였습니다. 또한, 입력을 원하지 않을 때에는 입력폼 대신 '새롭게 추가하기' 버튼만 보이도록 했고, 입력을 취소할 수 있는 '취소하기' 버튼을 생성하였습니다.
+![chrome_yrrtW1yQil](https://user-images.githubusercontent.com/101965666/217468269-3d72349e-6f73-46b4-b18f-775d8396d743.gif)
+
+### 변경 사항
+강의에서는 아래와 같이 연도별로 필터링을 하고, 차트에는 해당 연도의 월별로 지출한 금액을 표시하고 있습니다.
+![chrome_bTl3Zirtk5](https://user-images.githubusercontent.com/101965666/217470211-873df087-4cd6-4a88-ac84-2a7ffa0784b4.png)
+
+하지만 사용하는 입장에서 월별 지출보다 일별 지출을 확인하는 것이 더 유용할 것 같아, 아래와 같이 달별로 필터링을 하고 차트에는 해당 달의 일별로 지출한 금액을 표시하도록 했습니다.
+![chrome_7CETD6CXFv](https://user-images.githubusercontent.com/101965666/217469698-fe72eda6-9db3-48b6-b414-a580224d3daf.gif)
+
 ### 학습 내용 정리
 1. <a href='https://faceted-dash-136.notion.site/5-map-keys-filter-04461b1c04f44baba244c343a76067f7'>map(), keys, filter()</a>
 2. <a href='https://faceted-dash-136.notion.site/5-eb54a484098b4a688aa876f93d218efb'>조건부 내용</a>
