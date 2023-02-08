@@ -6,10 +6,10 @@ import ExpensesChart from './ExpensesChart'
 import { useState } from 'react';
 
 const Expenses = (props) => {
-  const [month, setmonth] = useState('1');
+  const [month, setMonth] = useState('1');
 
   const saveMonthHandler = (selectedMonth) => {
-    setmonth(selectedMonth);
+    setMonth(selectedMonth);
   }
 
   const filtered = props.items.filter((expense) => {
@@ -26,7 +26,7 @@ const Expenses = (props) => {
           selected={month} 
           onSaveMonthHandler={saveMonthHandler} 
         />
-        <ExpensesChart expenses={filtered} />
+        <ExpensesChart month={month} expenses={filtered} />
         <ExpensesList items={filtered} />
       </Card>
     </div>
