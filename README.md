@@ -80,3 +80,4 @@ form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송
 
 ## ✨ 섹션 6
 ### 학습 내용 정리
+1. <a href='https://faceted-dash-136.notion.site/6-4f2051b38aaa4aba8ddb9899e4d829ef'>리액트 컴포넌트 스타일링</a>
