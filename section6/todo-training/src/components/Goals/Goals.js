@@ -1,10 +1,13 @@
-
 const Goals = (props) => {
-  console.log(props.input)
+  const handleDelete = (index) => {
+    props.onDelete(index)
+  }
 
   return (
     <div>
-      {props.input.map(e=>e)}
+      {props.input.map((goal, index)=> (
+        <div key={index} onClick={handleDelete(index)}>{goal}</div>
+      ))}
     </div>
   );
 };

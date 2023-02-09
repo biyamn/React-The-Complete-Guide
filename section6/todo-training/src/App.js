@@ -10,10 +10,15 @@ function App() {
     setDisplayInputs([...displayInputs, goal]);
   }
   
+  const onDelete = (index) => {
+    console.log(displayInputs)
+    setDisplayInputs(displayInputs.filter((todo, i) => i !== index));
+  }
+
   return (
     <div className="App">
       <Input onSaveGoal={onSaveGoal}/>
-      <Goals input={displayInputs}/>
+      <Goals input={displayInputs} onDelete={onDelete} />
     </div>
   );
 }

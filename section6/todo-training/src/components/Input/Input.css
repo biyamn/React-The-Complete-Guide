@@ -1,0 +1,11 @@
+input:focus {
+  background-color: rgb(255, 254, 223);
+}
+
+label.invalid {
+  color: red;
+}
+
+input.invalid {
+  background-color: red;
+}
