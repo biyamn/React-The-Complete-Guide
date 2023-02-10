@@ -1,25 +1,13 @@
 import './App.css';
-import Input from './components/Input/Input';
-import Goals from './components/Goals/Goals';
-import { useState } from 'react';
+import Todo from './components/Todo/Todo/Todo';
+import Goal from './components/Goal/Goal/Goal';
 
-function App() {
-  const [displayInputs, setDisplayInputs] = useState([]);
-
-  const onSaveGoal = (goal) => {
-    setDisplayInputs([...displayInputs, goal]);
-  }
-  
-  const onDelete = (index) => {
-    console.log(displayInputs)
-    setDisplayInputs(displayInputs.filter((todo, i) => i !== index));
-  }
-
+const App = () => {
   return (
     <div className="App">
       <div className="box">
-        <Input onSaveGoal={onSaveGoal}/>
-        <Goals input={displayInputs} onDelete={onDelete} />
+        <Goal />
+        <Todo />
       </div>
     </div>
   );

@@ -1,0 +1,5 @@
+.container {
+  padding: 50px;
+  flex: 4;
+  white-space: pre-line;
+}
