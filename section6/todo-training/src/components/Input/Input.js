@@ -8,7 +8,7 @@ const Input = (props) => {
     setEnteredGoal(e.target.value);
     setIsValid(true);
   }
-
+  
   const submitHandler = (e) => {
     e.preventDefault();
     if (enteredGoal === '') {
