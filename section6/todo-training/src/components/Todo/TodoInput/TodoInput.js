@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './TodoInput.css';
+
 const Input = (props) => {
   const [enteredGoal, setEnteredGoal] = useState('');
   const [isValid, setIsValid] = useState(true);
@@ -22,7 +23,7 @@ const Input = (props) => {
 
   return (
     <form onSubmit={submitHandler}><input className={!isValid ? 'invalid' : ''} type='text' value={enteredGoal} onChange={goalChangeHandler} />
-      <button type='submit'>Add</button>
+      <button type='submit'>추가</button>
     </form>
   );
 };
