@@ -17,8 +17,10 @@ function App() {
 
   return (
     <div className="App">
-      <Input onSaveGoal={onSaveGoal}/>
-      <Goals input={displayInputs} onDelete={onDelete} />
+      <div className="box">
+        <Input onSaveGoal={onSaveGoal}/>
+        <Goals input={displayInputs} onDelete={onDelete} />
+      </div>
     </div>
   );
 }
