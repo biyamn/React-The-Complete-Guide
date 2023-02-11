@@ -1,9 +1,12 @@
-.App {
-  background-color: #1a202c;
+html {
   height: 100vh;
 }
 
+.App {
+  height: 100vh;
+}
 .box {
   display: flex;
   flex-direction: row;
+  height: 100vh;
 }

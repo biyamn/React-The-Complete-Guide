@@ -1,14 +1,25 @@
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .button {
   font: inherit;
   width: 120px;
-  height: 60px;
+  height: 65px;
   margin-left: 10px;
   border: 1px solid transparent;
   color: black;
   background: #a8dcfa;
   cursor: pointer;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .button:focus {
@@ -23,11 +34,13 @@
 }
 
 .input {
-  width: 400px;
+  width: 450px;
   height: 60px;
   border-color: transparent;
   background-color: #232934;
   border-radius: 6px;
+  font-size: 1.3rem;
+  color: white;
 }
 
 .input:focus {
@@ -37,9 +50,17 @@
 }
 
 .input_invalid {
-  width: 200px;
-  height: 40px;
+  width: 450px;
+  height: 65px;
   border: 2px solid red;
   border-radius: 6px;
   background-color: #373a43bc;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.input_valid:focus {
+  border: 2px solid #63c6ff;
+  outline: none;
+  background-color: #1b1e25;
 }

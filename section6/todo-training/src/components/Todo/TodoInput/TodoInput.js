@@ -22,10 +22,12 @@ const TodoInput = (props) => {
   }
 
   return (
-    <form onSubmit={submitHandler}>
-      <input className={!isValid ? styles.input_invalid : styles.input} type='text' value={enteredGoal} onChange={goalChangeHandler} />
-      <button className={styles.button} type='submit'>추가</button>
-    </form>
+    <div className={styles.container}>
+      <form onSubmit={submitHandler}>
+        <input className={!isValid ? styles.input_invalid : styles.input} type='text' value={enteredGoal} onChange={goalChangeHandler} />
+        <button className={styles.button} type='submit'>추가</button>
+      </form>
+    </div>
   );
 };
 

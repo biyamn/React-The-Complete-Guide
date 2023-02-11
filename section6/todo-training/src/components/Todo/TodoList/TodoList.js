@@ -1,12 +1,12 @@
-const Goals = (props) => {
+import TodoItem from '../TodoItem/TodoItem';
+import styles from './TodoList.module.css';
 
+const TodoList = (props) => {
   return (
-    <div>
-      {props.input.map((goal, index)=> (
-        <div key={index}>{goal}</div>
-      ))}
+    <div className={styles.container}>
+      <TodoItem input={props.input}/>
     </div>
   );
 };
 
-export default Goals;
+export default TodoList;
