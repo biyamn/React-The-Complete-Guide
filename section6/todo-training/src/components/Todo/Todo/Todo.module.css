@@ -1,6 +1,17 @@
 .container {
-  padding: 50px;
+  padding-left: 50px;
   flex: 6;
   white-space: pre-line;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 2.3rem;
+  color: white;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import styles from './GoalInput.module.css';
 
 const GoalInput = (props) => {
   const [enteredGoal, setEnteredGoal] = useState('');
@@ -21,8 +22,9 @@ const GoalInput = (props) => {
   }
   return (
     <div>
-      <form onSubmit={submitHandler}><input className={!isValid ? 'invalid' : ''} type='text' value={enteredGoal} onChange={goalChangeHandler} />
-        <button type='submit'>입력</button>
+      <form onSubmit={submitHandler}>
+        <input className={!isValid ? styles.input_invalid : styles.input} type='text' value={enteredGoal} onChange={goalChangeHandler} />
+        <button className={styles.button} type='submit'>입력</button>
       </form>
     </div>
   );

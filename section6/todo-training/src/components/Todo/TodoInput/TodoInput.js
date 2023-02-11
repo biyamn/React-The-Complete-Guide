@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './TodoInput.css';
+import styles from './TodoInput.module.css'
 
-const Input = (props) => {
+const TodoInput = (props) => {
   const [enteredGoal, setEnteredGoal] = useState('');
   const [isValid, setIsValid] = useState(true);
 
@@ -22,10 +22,11 @@ const Input = (props) => {
   }
 
   return (
-    <form onSubmit={submitHandler}><input className={!isValid ? 'invalid' : ''} type='text' value={enteredGoal} onChange={goalChangeHandler} />
-      <button type='submit'>추가</button>
+    <form onSubmit={submitHandler}>
+      <input className={!isValid ? styles.input_invalid : styles.input} type='text' value={enteredGoal} onChange={goalChangeHandler} />
+      <button className={styles.button} type='submit'>추가</button>
     </form>
   );
 };
 
-export default Input;
+export default TodoInput;

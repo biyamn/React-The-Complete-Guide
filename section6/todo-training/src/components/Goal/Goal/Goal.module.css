@@ -1,5 +1,10 @@
 .container {
-  padding: 50px;
+  padding-left: 50px;
   flex: 4;
   white-space: pre-line;
+}
+
+.title {
+  font-size: 2rem;
+  color: white;
 }

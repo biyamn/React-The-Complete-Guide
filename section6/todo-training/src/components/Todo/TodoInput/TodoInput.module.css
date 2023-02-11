@@ -1,0 +1,45 @@
+.button {
+  font: inherit;
+  width: 120px;
+  height: 60px;
+  margin-left: 10px;
+  border: 1px solid transparent;
+  color: black;
+  background: #a8dcfa;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover,
+.button:active {
+  background: #7eccf9;
+  border-color: transparent;
+  color: black;
+}
+
+.input {
+  width: 400px;
+  height: 60px;
+  border-color: transparent;
+  background-color: #232934;
+  border-radius: 6px;
+}
+
+.input:focus {
+  border: 2px solid #63c6ff;
+  outline: none;
+  background-color: #1b1e25;
+}
+
+.input_invalid {
+  width: 200px;
+  height: 40px;
+  border: 2px solid red;
+  border-radius: 6px;
+  background-color: #373a43bc;
+}
