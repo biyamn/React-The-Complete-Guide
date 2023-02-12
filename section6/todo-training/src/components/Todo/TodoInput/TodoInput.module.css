@@ -59,7 +59,7 @@ form {
   color: white;
 }
 
-.input_valid:focus {
+.input_invalid:focus {
   border: 2px solid #63c6ff;
   outline: none;
   background-color: #1b1e25;
