@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import styles from './TodoItem.module.css'
 
 const TodoItem = (props) => {
@@ -7,7 +7,11 @@ const TodoItem = (props) => {
   return (
     <div className={styles.items}>
       {props.item.map((todo) => (
-        <div className={styles.item} key={todo.id} onClick={() => onDelete(todo.id)}>{todo.text}</div>
+        <div 
+          className={styles.item} 
+          key={todo.id} 
+          onClick={() => onDelete(todo.id)}>{todo.text}
+        </div>
       ))}
       
 
