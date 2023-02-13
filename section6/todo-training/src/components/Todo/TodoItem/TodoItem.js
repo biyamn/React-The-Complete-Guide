@@ -3,7 +3,7 @@ import styles from './TodoItem.module.css'
 
 const TodoItem = (props) => {
   const onDelete = (id) => props.onDelete(id);
-  console.log(props.item)
+  
   return (
     <div className={styles.items}>
       {props.item.map((todo) => (
