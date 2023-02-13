@@ -25,3 +25,6 @@
 - **구현 결과**: 
 
 ![image (1)](https://user-images.githubusercontent.com/101965666/218552725-e01a86c3-1ccb-4dc4-91d7-01ed774f482d.gif)
+
+
+### 이후 과정은 https://github.com/biyamn/Todo-list라는 새로운 레포지토리에서 이곳에서 진행하려고 합니다.
