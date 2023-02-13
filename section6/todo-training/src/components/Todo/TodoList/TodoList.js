@@ -3,9 +3,10 @@ import styles from './TodoList.module.css';
 
 const TodoList = (props) => {
   const onDelete = (id) => props.onDelete(id);
+  console.log(props.item)
   return (
     <div className={styles.container}>
-      <TodoItem input={props.input} onDelete={onDelete}/>
+      <TodoItem item={props.item} onDelete={onDelete}/>
     </div>
   );
 };
