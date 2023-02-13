@@ -23,7 +23,12 @@ const GoalInput = (props) => {
   return (
     <div>
       <form onSubmit={submitHandler}>
-        <input className={!isValid ? styles.input_invalid : styles.input} type='text' value={enteredGoal} onChange={goalChangeHandler} />
+        <input 
+          className={!isValid ? `${styles.input} ${styles.invalid}` : `${styles.input}`}
+          type='text' 
+          value={enteredGoal} 
+          onChange={goalChangeHandler} 
+        />
         <button className={styles.button} type='submit'>입력</button>
       </form>
     </div>

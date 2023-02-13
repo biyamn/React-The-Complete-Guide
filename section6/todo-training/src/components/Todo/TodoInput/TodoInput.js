@@ -17,14 +17,24 @@ const TodoInput = (props) => {
       return;
     }
     setIsValid(true);
-    props.onSaveGoal(enteredGoal)
+
+    const enteredGoalArray = {
+      id: Math.random(),
+      text: enteredGoal
+    }
+
+    props.onSaveGoal(enteredGoalArray)
     setEnteredGoal('');
   }
 
   return (
     <div className={styles.container}>
       <form onSubmit={submitHandler}>
-        <input className={!isValid ? styles.input_invalid : styles.input} type='text' value={enteredGoal} onChange={goalChangeHandler} />
+        <input className={!isValid ? `${styles.input} ${styles.invalid}` : `${styles.input}`}
+          type='text' 
+          value={enteredGoal} 
+          onChange={goalChangeHandler} 
+        />
         <button className={styles.button} type='submit'>추가</button>
       </form>
     </div>

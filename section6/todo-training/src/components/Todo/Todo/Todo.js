@@ -10,9 +10,8 @@ const Todo = () => {
     setDisplayInputs([...displayInputs, goal]);
   }
   
-  const onDelete = (index) => {
-    console.log(displayInputs)
-    setDisplayInputs(displayInputs.filter((todo, i) => i !== index));
+  const onDelete = (id) => {
+    setDisplayInputs(displayInputs.filter((todo) => todo.id !== id));
   }
   console.log(displayInputs)
   return (

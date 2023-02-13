@@ -43,24 +43,13 @@ form {
   color: white;
 }
 
-.input:focus {
+.input:focus, .input.invalid:focus {
   border: 2px solid #63c6ff;
   outline: none;
   background-color: #1b1e25;
 }
 
-.input_invalid {
-  width: 450px;
-  height: 65px;
+.input.invalid {
   border: 2px solid red;
-  border-radius: 6px;
   background-color: #373a43bc;
-  font-size: 1.3rem;
-  color: white;
-}
-
-.input_invalid:focus {
-  border: 2px solid #63c6ff;
-  outline: none;
-  background-color: #1b1e25;
 }
