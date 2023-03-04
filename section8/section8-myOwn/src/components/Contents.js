@@ -1,9 +1,14 @@
 
 
-const Contents = () => {
+const Contents = ({ data }) => {
   return (
     <div>
-      
+      {data.map((item) => (
+        <li>
+          {item.username}
+          {item.age}
+        </li>
+      ))}
     </div>
   );
 };
