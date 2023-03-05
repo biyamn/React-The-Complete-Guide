@@ -5,6 +5,7 @@ const Form = ({ onSaveData }) => {
   const [enteredAge, setEnteredAge] = useState('');
 
   const data = {
+    id: Math.random(),
     username: enteredUsername,
     age: enteredAge
   }

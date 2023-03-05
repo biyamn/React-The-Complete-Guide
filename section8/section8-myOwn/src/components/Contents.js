@@ -1,13 +1,14 @@
 
 
 const Contents = ({ data }) => {
+  console.log(data);
   return (
     <div>
       {data.map((item) => (
-        <li>
+        <div key={data.id}>
           {item.username}
           {item.age}
-        </li>
+        </div>
       ))}
     </div>
   );

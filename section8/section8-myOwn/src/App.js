@@ -6,11 +6,12 @@ import { useState } from 'react';
 function App() {
   const [formData, setFormData] = useState([]);
 
-  const onSaveData = ({ data }) => {
+  const onSaveData = (data) => {
+    console.log(data);
     setFormData([...formData, data]);
     console.log(formData);
   }
-
+  console.log(formData);
   return (
     <div className={styles.container}>
       <Form onSaveData={onSaveData}/>
