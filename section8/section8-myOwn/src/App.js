@@ -9,16 +9,14 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const onSaveData = (data) => {
+    if (data.username === '') {
+      setIsModalOpen(true);
+    }
     setFormData([...formData, data]);
-  }
-  
-  const openModal = () => {
-    setIsModalOpen(true);
   }
 
   return (
     <div className={styles.container}>
-      <button onClick={openModal}>modal test</button>
       <Modal isOpen={isModalOpen} 
         style={{
           overlay: {
@@ -47,7 +45,7 @@ function App() {
           }
         }}
         >
-        뭔가 잘못 입력함
+          뭔가 잘못 입력함
         <button onClick={()=> setIsModalOpen(false)}>취소</button>
       </Modal>
       <Form onSaveData={onSaveData}/>
