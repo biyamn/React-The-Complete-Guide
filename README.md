@@ -79,5 +79,22 @@ form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송
 <br>
 
 ## ✨ 섹션 6
+리액트 컴포넌트를 스타일링하는 방법으로 Styled Components, CSS Moudle 등에 관해 알아보았습니다. 
 ### 학습 내용 정리
 1. <a href='https://faceted-dash-136.notion.site/6-4f2051b38aaa4aba8ddb9899e4d829ef'>리액트 컴포넌트 스타일링</a>
+
+
+<br>
+
+## ✨ 섹션 8
+### 입력폼, 모달창 생성
+이전 섹션까지 하던 가계부 만들기를 마치고 입력폼과 모달창을 만들어보았습니다. 
+입력폼에서 입력받은 이름과 나이를 화면에 보여주고, 유효하지 않은 값(빈 값, 0 이하의 나이)을 입력하면 에러를 표시하는 모달창을 띄우는 기능이 있습니다.  
+
+강의를 듣기 전 react-modal 라이브러리로 모달창을 만들어보았고, 강의를 들으며 라이브러리 없이 모달창을 만들어보았습니다. 
+![chrome_wbhQheVcNC](https://user-images.githubusercontent.com/101965666/223939665-43d34f23-a993-4147-b6ee-d0fa6f8cd952.gif)
+
+### 학습 내용 정리
+1. <a href='https://faceted-dash-136.notion.site/8-Modal-react-modal-29118b77c15644e2a9a3f7488e63fcad'>Modal(react-modal 라이브러리, 커스텀)</a>
+
+
