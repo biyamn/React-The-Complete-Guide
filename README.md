@@ -83,7 +83,6 @@ form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송
 ### 학습 내용 정리
 1. <a href='https://faceted-dash-136.notion.site/6-4f2051b38aaa4aba8ddb9899e4d829ef'>리액트 컴포넌트 스타일링</a>
 
-
 <br>
 
 ## ✨ 섹션 8
@@ -97,4 +96,10 @@ form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송
 ### 학습 내용 정리
 1. <a href='https://faceted-dash-136.notion.site/8-Modal-react-modal-29118b77c15644e2a9a3f7488e63fcad'>Modal(react-modal 라이브러리, 커스텀)</a>
 
+<br>
+## ✨ 섹션 9
+### Portal 사용하여 모달창 만들기
+섹션 8에서 만들었던 모달창을 Portal을 사용해서 만들어보았습니다.
 
+### 학습 내용 정리
+1. <a href='https://faceted-dash-136.notion.site/9-Portal-Modal-011b1b73ca7d4ed4b30152fc56f09c03'>Portal로 Modal 만들기</a>
