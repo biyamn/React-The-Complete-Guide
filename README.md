@@ -100,6 +100,8 @@ form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송
 ## ✨ 섹션 9
 ### Portal 사용하여 모달창 만들기
 섹션 8에서 만들었던 모달창을 Portal을 사용해서 만들어보았습니다.
+그리고 input태그 안의 값을 가져올 때 state가 아닌 ref를 사용해보았습니다.
 
 ### 학습 내용 정리
 1. <a href='https://faceted-dash-136.notion.site/9-Portal-Modal-011b1b73ca7d4ed4b30152fc56f09c03'>Portal로 Modal 만들기</a>
+2. <a href='https://faceted-dash-136.notion.site/9-useRef-91e83b642069493fa2acdbeb16ba0142'>useRef</a>
