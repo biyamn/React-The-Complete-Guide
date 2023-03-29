@@ -1,34 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [text, setText] = useState('');
+  const [inputIsValid, setInputIsValid] = useState(false);
+
+  const textChangeHandler = (event) => {
+    setText(event.target.value);
+    console.log(typeof(text));
+    console.log(text);
+    console.log(text.trim().length);
+    console.log(text.trim().length > 3);
+    // text가 아니라 event.target.value를 써야 하는 이유: event.target.value는 바로 바뀌는데 text는 App이 재렌더링되기 전까지 바뀌지 않아서(비동기라서)
+    setInputIsValid(event.target.value.trim().length > 9);
+  }
+  
+  const submitHandler = (event) => {
+    event.preventDefault();
+  }
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <form onSubmit={submitHandler}>
+      <input type="text" value={text} onChange={textChangeHandler} placeholder="10글자 이상 입력해주세요" />
+      <button type="submit" disabled={!inputIsValid}>전송</button>
+    </form>
   )
 }
 

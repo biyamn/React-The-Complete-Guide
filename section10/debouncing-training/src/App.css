@@ -5,6 +5,21 @@
   text-align: center;
 }
 
+input {
+  height: 40px;
+  width: 80%;
+  font-size: 20px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  margin: 30px;
+  background-color: #efefef;
+  color: rgb(0, 0, 0);
+}
+
+input:focus {
+  outline: 1px solid #888888;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
