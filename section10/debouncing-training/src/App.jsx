@@ -11,16 +11,17 @@ function App() {
     // useEffect를 이 부분에 넣으면 안됨: https://legacy.reactjs.org/docs/hooks-rules.html
   };
 
+  // 마지막 입력값에서 500ms보다 더 오래 아무 입력도 없으면 입력값 검사를 할 거임
   useEffect(() => {
     console.log(`텍스트가 바뀌었어요! ${text}`)
-    // 이제 이거를 입력이 멈춘 뒤 500ms가 지났을 때만 실행해야 함
+    //
     const timer = setTimeout(() => {
       // text가 아니라 event.target.value를 써야 하는 이유: event.target.value는 바로 바뀌는데 text는 App이 재렌더링되기 전까지 바뀌지 않아서(비동기라서)
       console.log("10글자 이상인지 검사합니다");
       setInputIsValid(text.trim().length > 9);
     }, 500);
 
-    // return 부분은 useEffect가 반환하는 값임. 
+    // return 부분은 useEffect가 반환하는 값임. useEffect의 기능과 별개로! clearTimeout을 쓰기 위해 useEffect를 쓴 것
     return () => {
       console.log('텍스트가 바뀌어서 새 useEffect가 실행될 거래요! cleanup!')
       clearTimeout(timer)
