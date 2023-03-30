@@ -9,9 +9,9 @@ const emailReducer = (state, action) => {
     case "USER_EMAIL_INPUT": 
       return { value: action.val, isValid: action.val.includes('@') }
     case "USER_INPUT_BLUR": 
-      return { value: state.value, isValid: action.val.includes('@') }
+      return { value: state.value, isValid: state.value.includes('@') }
     default: 
-      return { value: state.val, isValid: state.value.includes('@') }
+      return { value: '', isValid: false }
   }
 }
 
@@ -23,9 +23,9 @@ const Login = (props) => {
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
 
-  const [email, dispatchEmail] = useReducer(emailReducer, {
+  const [emailState, dispatchEmail] = useReducer(emailReducer, {
     value: '',
-    isValid: false,
+    isValid: null,
   })
 
   useEffect(() => {
@@ -63,13 +63,13 @@ const Login = (props) => {
     setEnteredPassword(event.target.value);
 
     setFormIsValid(
-      email.value.includes('@') && event.target.value.trim().length > 6
+      emailState.isValid && event.target.value.trim().length > 6
     );
   };
 
-  const validateEmailHandler = (event) => {
+  const validateEmailHandler = () => {
     // setEmailIsValid(email.value.includes('@'));
-    dispatchEmail({ type: 'USER_EMAIL_INPUT_CHANGE', val: event.target.value })
+    dispatchEmail({ type: 'USER_INPUT_BLUR' })
   };
 
   const validatePasswordHandler = () => {
@@ -78,7 +78,7 @@ const Login = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    props.onLogin(email.value, enteredPassword);
+    props.onLogin(emailState.value, enteredPassword);
   };
 
   return (
@@ -86,14 +86,14 @@ const Login = (props) => {
       <form onSubmit={submitHandler}>
         <div
           className={`${classes.control} ${
-            email.isValid === false ? classes.invalid : ''
+            emailState.isValid === false ? classes.invalid : ''
           }`}
         >
           <label htmlFor="email">E-Mail</label>
           <input
             type="email"
             id="email"
-            value={email.value}
+            value={emailState.value}
             onChange={emailChangeHandler}
             onBlur={validateEmailHandler}
           />
