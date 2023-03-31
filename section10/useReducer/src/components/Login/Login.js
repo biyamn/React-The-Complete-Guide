@@ -60,19 +60,26 @@ const Login = (props) => {
     };
   }, []);
 
+  // 객체 구조분해할당
+  // 유효성검사를 통과한 상태에 뭘 더 입력하면 그건 검사를 하지 않기 위함
+  // 객체에서 속성을 빼서 그걸 종속성 배열에 넣음으로써 value가 변할 때가 아니라 isValid가 변할 때만 검사를 하게 했음
+  const { isValid: emailIsValid} = emailState;
+  const { isValid: passwordIsValid } = passwordState;
+
   useEffect(() => {
     const identifier = setTimeout(() => {
       console.log('Checking form validity!');
-      setFormIsValid(
-        emailState.isValid && passwordState.isValid
-      );
+      // setFormIsValid(
+      //   emailState.isValid && passwordState.isValid
+      // );
+      setFormIsValid(emailIsValid && passwordIsValid);
     }, 500);
 
     return () => {
       console.log('CLEANUP');
       clearTimeout(identifier);
     };
-  }, [emailState, passwordState]);
+  }, [emailIsValid, passwordIsValid]);
 
   const emailChangeHandler = (event) => {
     dispatchEmail({ type: 'USER_INPUT', val: event.target.value })
