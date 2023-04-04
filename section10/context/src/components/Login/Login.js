@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useReducer } from 'react';
+import React, { useState, useEffect, useReducer, useContext } from 'react';
 
 import Card from '../UI/Card/Card';
 import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
+import AuthContext from '../../store/auth-context';
 
 // 리듀서 함수는 컴포넌트 함수 바깥에 만든다. 컴포넌트 함수 내부에서 만들어진 어떤 데이터도 필요하지 않기 때문에 밖에서 만들어질 수 있다
 const emailReducer = (state, action) => {
@@ -52,6 +53,7 @@ const Login = (props) => {
     isValid: null,
   })
 
+  const authCtx = useContext(AuthContext)
   useEffect(() => {
     console.log('EFFECT RUNNING');
 
@@ -110,7 +112,7 @@ const Login = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    props.onLogin(emailState.value, passwordState);
+    authCtx.onLogin(emailState.value, passwordState);
   };
 
   return (
