@@ -111,15 +111,13 @@ form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송
 <br>
 
 ## ✨ 섹션 10
-### useEffect 사용해보기, useEffect로 debouncing 구현해보기
-- 로컬 스토리지를 사용하여 페이지 새로고침시에도 로그인 정보가 유지되게 하였고, 로그인 상태를 확인하는 부분에서 무한루프에 걸리는 것을 useEffect를 사용하여 해결했습니다.
-- 입력값의 유효성을 검사하는 부분에서 마지막으로 발생한 이벤트를 기준으로 특정 시간이 지난 후 하나의 이벤트만 실행하는 기법인 디바운싱을 적용하기 위해 useEffect를 사용하였습니다.
-
-### useReducer 사용해보기
-입력값(emailValue, passwordValue)와 입력값의 유효성(emailIsValie, passwordIsValid)를 useRe
-
-### useContext 사용해보기
-
+### local storage, useEffect, useReducer, useContext, useRef 사용해보기
+- 로컬 스토리지를 사용하여 페이지 새로고침시에도 로그인 정보가 유지되게 했습니다.
+- useEffect를 사용하여 로그인 상태 확인 부분의 무한루프를  해결했습니다.
+- 입력값의 유효성을 검사하는 부분에서 디바운싱(마지막으로 발생한 이벤트를 기준으로 특정 시간이 지난 후 하나의 이벤트만 실행하는 것)을 적용하기 위해 useEffect를 사용했습니다.
+- useReducer를 사용하여 email과 password 각각에 존재하는 여러 액션들을 두 군데에서(emailReducer, passwordReducer) 관리했습니다.
+- useContext를 사용하여 여러 state를 하나의 파일에서 관리했습니다.
+- 함수형 컴포넌트에 ref를 전달하기 위해 forwardRef를 사용하였고, 추가적으로 useImperativeHandle도 사용해보았습니다.
 
 ### 학습 내용 정리
 1. <a href='https://faceted-dash-136.notion.site/10-useEffect-c77037b2077f4ba7b5b95d91fba26b9b'>useEffect</a>
