@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     const storedUserLoggedInInformation = localStorage.getItem('isLoggedIn');
-
+    // setState가 호출될 때마다 리렌더링된다고 보면 됨(상태가 같을 때 리렌더링 안될 때도 있지만 의존하지 말 것)
     if (storedUserLoggedInInformation === '1') {
       setIsLoggedIn(true);
   }
