@@ -117,14 +117,18 @@ const Login = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    // console.log(emailInputRef.current)
+    // console.log(emailInputRef.current.trimmedValue())
     if (formIsValid) {
       // 폼이 유효하면 로그인
       authCtx.onLogin(emailState.value, passwordState.value);
     } else if (!emailIsValid) {
       // emailInput이 유효하지 않으면 유효하지 emailInput에 포커스하기
-      emailInputRef.current.focus();
+      emailInputRef.current.inputFocus();
+
     } else {
-      passwordInputRef.current.focus();
+      passwordInputRef.current.inputFocus();
+
     }
   };
 

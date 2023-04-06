@@ -14,8 +14,14 @@ const Input = React.forwardRef((props, ref) => {
   }
 
   useImperativeHandle(ref, () => {
+    console.log('Input 안에서 imperative handle 만드는 중...')
     return {
-      focus: activate
+      inputFocus: () => {
+        console.log('imperative handle 안에 있는 focus 호출됨!')
+        activate()
+      },
+      // trimmedValue: () => inputRef.current.value.trim()
+      // inputFocus: activate
     }
   })
 
@@ -27,6 +33,7 @@ const Input = React.forwardRef((props, ref) => {
     >
       <label htmlFor={props.id}>{props.label}</label>
       <input
+        // ref={ref}
         ref={inputRef}
         type={props.type}
         id={props.id}
