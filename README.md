@@ -97,6 +97,7 @@ form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송
 1. <a href='https://faceted-dash-136.notion.site/8-Modal-react-modal-29118b77c15644e2a9a3f7488e63fcad'>Modal(react-modal 라이브러리, 커스텀)</a>
 
 <br>
+
 ## ✨ 섹션 9
 ### Portal 사용하여 모달창 만들기
 섹션 8에서 만들었던 모달창을 Portal을 사용해서 만들어보았습니다.
@@ -105,3 +106,23 @@ form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송
 ### 학습 내용 정리
 1. <a href='https://faceted-dash-136.notion.site/9-Portal-Modal-011b1b73ca7d4ed4b30152fc56f09c03'>Portal로 Modal 만들기</a>
 2. <a href='https://faceted-dash-136.notion.site/9-useRef-91e83b642069493fa2acdbeb16ba0142'>useRef</a>
+
+
+<br>
+
+## ✨ 섹션 10
+### useEffect 사용해보기, useEffect로 debouncing 구현해보기
+- 로컬 스토리지를 사용하여 페이지 새로고침시에도 로그인 정보가 유지되게 하였고, 로그인 상태를 확인하는 부분에서 무한루프에 걸리는 것을 useEffect를 사용하여 해결했습니다.
+- 입력값의 유효성을 검사하는 부분에서 마지막으로 발생한 이벤트를 기준으로 특정 시간이 지난 후 하나의 이벤트만 실행하는 기법인 디바운싱을 적용하기 위해 useEffect를 사용하였습니다.
+
+### useReducer 사용해보기
+입력값(emailValue, passwordValue)와 입력값의 유효성(emailIsValie, passwordIsValid)를 useRe
+
+### useContext 사용해보기
+
+
+### 학습 내용 정리
+1. <a href='https://faceted-dash-136.notion.site/10-useEffect-c77037b2077f4ba7b5b95d91fba26b9b'>useEffect</a>
+
+<br>
+
