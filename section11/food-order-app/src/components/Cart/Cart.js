@@ -1,11 +1,16 @@
 import React from 'react';
 import classes from './Cart.module.css';
 
-// 장바구니 컴포넌트. 상단의 'Your Cart' 버튼을 클릭하면 모달로 이 장바구니를 렌더링 할 거임
+// 장바구니 컴포넌트. 상단의 'Your Cart' 버튼을 클릭하면 모달로 이 Cart 컴포넌트를 렌더링 할 거임
 const Cart = (props) => {
   const cartItems = <ul className={classes['cart-items']}>{[
     {id: 'c1', name: 'Sushi', amount: 2, price: 12.99}
-  ].map(item => <li>{item.name}</li>)}</ul>;
+  ].map(item => <li key={item.id}>{item.name}</li>)}</ul>;
+
+  const cartCloseHandler = () => {
+    props.setCartIsShown(false);
+    props.onSetCartIsShown(props.cartIsShown)
+  }
 
   return (
     <div className={props.className}>
@@ -15,7 +20,7 @@ const Cart = (props) => {
         <span>35.62</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes['button--alt']}>Close</button>
+        <button className={classes['button--alt']} onClick={cartCloseHandler}>Close</button>
         <button className={classes.button}>Order</button>
       </div>
     </div>

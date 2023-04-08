@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Modal from '../UI/Modal';
 import mealsImage from '../../assets/meals.jpg';
 import classes from './Header.module.css';
 import HeaderCartButton from './HeaderCartButton';
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const Header = (props) => {
+  const onSetCartIsShown = props => {
+    props.onSetCartIsShown(props.cartIsShown)
+  }
   return (
     <>
-      {isOpen && <Modal />}
+      {props.cartIsShown && <Modal cartIsShown={props.cartIsShown} setCartIsShown={props.setCartIsShown}  onSetCartIsShown={onSetCartIsShown}/>}
       <header className={classes.header}>
         <h1>ReactMeals</h1>
-        <HeaderCartButton isOpen={isOpen} setIsOpen={setIsOpen} />
+        <HeaderCartButton cartIsShown={props.cartIsShown} setCartIsShown={props.setCartIsShown} />
       </header>
       {/* 하이픈(-)이 있으므로 .을 사용할 수 없어서 대괄호를 쓴다고 함: https://github.com/facebook/create-react-app/issues/11155*/}
       <div className={classes['main-image']}>
