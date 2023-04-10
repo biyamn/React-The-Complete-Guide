@@ -1,29 +1,30 @@
 import React from 'react';
 import classes from './Cart.module.css';
+import Modal from '../UI/Modal';
 
-// 장바구니 컴포넌트. 상단의 'Your Cart' 버튼을 클릭하면 모달로 이 Cart 컴포넌트를 렌더링 할 거임
+// Modal 안에 Cart가 있는 게 아니라 Cart 안에 Modal이 있는 거였음.
+// 그니까 Cart에 장바구니 한 목록들이 있고 거기서 Modal을 띄우면 장바구니 목록을 모달에 보여주는 거임
 const Cart = (props) => {
-  const cartItems = <ul className={classes['cart-items']}>{[
-    {id: 'c1', name: 'Sushi', amount: 2, price: 12.99}
-  ].map(item => <li key={item.id}>{item.name}</li>)}</ul>;
-
-  const cartCloseHandler = () => {
-    props.setCartIsShown(false);
-    props.onSetCartIsShown(props.cartIsShown)
-  }
+  const cartItems = (
+  <ul className={classes['cart-items']}>
+      {[{id: 'c1', name: 'Sushi', amount: 2, price: 12.99}].map(item => 
+        <li key={item.id}>{item.name}</li>
+      )}
+    </ul>
+  );
 
   return (
-    <div className={props.className}>
+    <Modal onClose={props.onClose}>
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>
         <span>35.62</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes['button--alt']} onClick={cartCloseHandler}>Close</button>
+        <button className={classes['button--alt']} onClick={props.onClose}>Close</button>
         <button className={classes.button}>Order</button>
       </div>
-    </div>
+    </Modal>
   );
 };
 
