@@ -5,12 +5,10 @@ import classes from './Header.module.css';
 import HeaderCartButton from './HeaderCartButton';
 
 const Header = (props) => {
-  const onSetCartIsShown = props => {
-    props.onSetCartIsShown(props.cartIsShown)
-  }
+  
   return (
     <>
-      {props.cartIsShown && <Modal cartIsShown={props.cartIsShown} setCartIsShown={props.setCartIsShown}  onSetCartIsShown={onSetCartIsShown}/>}
+      {props.cartIsShown && <Modal onClose={props.onClose} />}
       <header className={classes.header}>
         <h1>ReactMeals</h1>
         <HeaderCartButton onClick={props.onShowCart} />

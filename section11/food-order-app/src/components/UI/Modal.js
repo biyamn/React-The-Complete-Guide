@@ -19,7 +19,7 @@ const Modal = props => {
 
   return (
     <>
-      {ReactDOM.createPortal(<Backdrop onClick={() => props.setCartIsShown(false)} />, document.getElementById("backdrop-root"))}
+      {ReactDOM.createPortal(<Backdrop onClose={props.onClose} />, document.getElementById("backdrop-root"))}
       {ReactDOM.createPortal(<Overlay>{props.children}</Overlay>, document.getElementById("overlay-root"))}
     </>
   );
