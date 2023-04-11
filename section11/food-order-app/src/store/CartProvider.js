@@ -10,14 +10,19 @@ const defaultCartState = {
 // 컴포넌트가 재랜더링될 때 cartReducer는 다시 평가되지 않음
 const cartReducer = (state, action) => {
   if (action.type === 'ADD') {
-
+    // concat은 완전히 새로운 배열을 반환한다
+    const updatedItems = state.items.concat(action.item);
+    const updatedTotalAmount = state.totalAmount + action.item.price * action.item.amount
+    return {
+      items: updatedItems,
+      totalAmount: updatedTotalAmount
+    };
   }
 
   return defaultCartState;
 }
 
 const CartProvider = props => {
-
   const [cartState, dispatchCartAction] =  useReducer(cartReducer, defaultCartState);
 
   const addItemToCartHandler = item => {
@@ -25,7 +30,7 @@ const CartProvider = props => {
   };
 
   const removeItemFromCartHandler = id => {
-  dispatchCartAction({type: 'REMOVE', id: id});
+    dispatchCartAction({type: 'REMOVE', id: id});
   };
 
   const cartContext = {
