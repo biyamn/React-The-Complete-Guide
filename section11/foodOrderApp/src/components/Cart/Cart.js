@@ -12,9 +12,13 @@ const Cart = (props) => {
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
   const hasItems = cartCtx.items.length > 0;
 
-  const cartItemRemoveHandler = id => {};
+  const cartItemRemoveHandler = id => {
+    cartCtx.removeItem(id);
+  };
 
-  const cartItemAddHandler = item => {};
+  const cartItemAddHandler = item => {
+    cartCtx.addItem({...item, amount: 1});
+  };
 
   const cartItems = (
   <ul className={classes['cart-items']}>
@@ -25,10 +29,12 @@ const Cart = (props) => {
           amount={item.amount} 
           price={item.price} 
           // bind()가 뭔지 찾아봐도 모르겠음. 나중에 문제가 생기면 여길 봐보자
-          // remove={cartItemRemoveHandler.bind(null, item.id)} 
-          // onAdd={cartItemAddHandler.bind(null, item)} 
-          remove={cartItemRemoveHandler} 
-          onAdd={cartItemAddHandler} 
+          // 오 이거 Cart 안에서 -, + 누를 때 오류가 발생함.
+          // Cannot read properties of undefined (reading 'toFixed')
+          onRemove={cartItemRemoveHandler.bind(null, item.id)} 
+          onAdd={cartItemAddHandler.bind(null, item)} 
+          // remove={cartItemRemoveHandler} 
+          // onAdd={cartItemAddHandler} 
         />
       )}
     </ul>
