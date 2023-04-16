@@ -124,3 +124,22 @@ form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송
 
 <br>
 
+## ✨ 섹션 11
+### 음식 주문앱 만들기
+지금까지 배운 내용을 활용하여 장바구니 기능이 있는 음식 주문앱을 만들었습니다.
+![chrome_1hoBXhewPE](https://user-images.githubusercontent.com/101965666/232278037-65e2da18-be67-480c-a9ca-25cc4d5bfef9.gif)
+### 학습 내용 정리
+1. <a href='https://faceted-dash-136.notion.site/11-3aaa23098e164b0c8b5ad1d6d5f1fb23'>useReducer</a>
+
+### 블로그 포스팅
+1. 추후 추가 예정
+
+<br>
+
+## ✨ 섹션 12
+### React.memo, useMemo, useCallback 사용해보기
+- 리액트가 작동하는 방식을 공부하며 컴포넌트가 실행될 때 가상의 DOM과 비교하여 변경된 부분만 실제 DOM에 반영되는 것을 확인했습니다.
+- React.memo, useMemo, useCallback등 리액트에서 최적화하는 방법을 알아보았습니다.
+
+### 학습 내용 정리
+1. <a href='https://faceted-dash-136.notion.site/12-React-memo-useCallback-useState-914f1a6113b34c26a20adf3a3dc4ebb4'>React.memo, useCallback, useState(콜백함수)</a>
