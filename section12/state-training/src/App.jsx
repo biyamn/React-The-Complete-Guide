@@ -37,6 +37,11 @@ const App = () => {
     // console.log(count);
   // }
 
+   // 메모 - 아래 두 개는 같은 뜻
+    // setCount(prev => prev + 1);
+    // setCount(function(prev) {
+    //   return prev + 1
+    // })
 
   const plusHandler = () => {
     setCount(prev => {
