@@ -131,8 +131,10 @@ form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송
 ### 학습 내용 정리
 1. <a href='https://faceted-dash-136.notion.site/11-3aaa23098e164b0c8b5ad1d6d5f1fb23'>useReducer</a>
 
-### 블로그 포스팅
-1. 추후 추가 예정
+### 개인적으로 만든 주문앱
+- <a href='https://github.com/biyamn/GreekYogurt-Order-App'>깃허브</a> 
+<br>
+- <a href='https://velog.io/@hamham/series/%EC%9E%A5%EB%B0%94%EA%B5%AC%EB%8B%88'>블로그 후기</a>
 
 <br>
 
