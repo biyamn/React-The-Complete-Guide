@@ -7,6 +7,7 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   // fetch는 promise객체(비동기)를 반환
+  // async await를 사용하면 then을 사용하지 않아도 돼서 가독성이 높아짐
   async function fetchMoviesHandler() {
     const response = await fetch('https://swapi.dev/api/films/')
     const data = await response.json();
