@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import MoviesList from './components/MoviesList';
 import './App.css';
@@ -8,10 +8,11 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  
+  
   // fetch는 promise객체(비동기)를 반환
   // async await를 사용하면 then을 사용하지 않아도 돼서 가독성이 높아짐
-
-  async function fetchMoviesHandler() {
+  const fetchMoviesHandler = useCallback(async () => {
     setIsLoading(true);
     setError(null);
     
@@ -35,7 +36,11 @@ function App() {
       setError(error.message);
     } 
     setIsLoading(false);
-  }
+  }, []);
+
+  useEffect(() =>{
+    fetchMoviesHandler();
+  }, [fetchMoviesHandler]);
 
   let content = <p>Found no movies.</p>;
   if (movies.length > 0) {  
