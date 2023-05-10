@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import useHttp from '../../hooks/use-http';
 import Section from '../UI/Section';
 import TaskForm from './TaskForm';
 
@@ -7,6 +8,7 @@ const NewTask = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  // useHttp 여기부터 시작
   const enterTaskHandler = async (taskText) => {
     setIsLoading(true);
     setError(null);
@@ -37,7 +39,8 @@ const NewTask = (props) => {
     }
     setIsLoading(false);
   };
-
+  // 여기까지
+  
   return (
     <Section>
       <TaskForm onEnterTask={enterTaskHandler} loading={isLoading} />

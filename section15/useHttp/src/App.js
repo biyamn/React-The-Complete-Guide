@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import useHttp from './hooks/use-http';
 import Tasks from './components/Tasks/Tasks';
 import NewTask from './components/NewTask/NewTask';
 
@@ -8,6 +9,7 @@ function App() {
   const [error, setError] = useState(null);
   const [tasks, setTasks] = useState([]);
 
+  // useHttp 여기부터 시작
   const fetchTasks = async () => {
     setIsLoading(true);
     setError(null);
@@ -34,7 +36,8 @@ function App() {
     }
     setIsLoading(false);
   };
-
+  // 여기까지
+  
   useEffect(() => {
     fetchTasks();
   }, []);
