@@ -145,3 +145,12 @@ form 태그를 이용하여 제목, 가격, 날짜를 입력받고 이를 전송
 
 ### 학습 내용 정리
 1. <a href='https://faceted-dash-136.notion.site/12-React-memo-useCallback-useState-914f1a6113b34c26a20adf3a3dc4ebb4'>React.memo, useCallback, useState(콜백함수)</a>
+
+
+<br>
+
+## ✨ 섹션 14
+### HTTP 요청 보내기
+- Star Wars 영화 시리즈의 정보를 API 형태로 제공하는 웹 서비스(https://swapi.dev/) 이용하여 HTTP GET 요청을 보내고 영화 목록 정보를 가져올 수 있습니다.
+- 로딩 및 HTTP 오류 발생시 화면에 로딩 혹은 오류를 안내하는 화면을 렌더링했습니다.
+- Firebase라는 데이터베이스 서비스를 이용하여 HTTP POST 요청을 보내고, 응답으로 데이터를 받아올 수 있었습니다.
