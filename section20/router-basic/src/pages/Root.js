@@ -1,8 +1,16 @@
 import React from 'react';
+import { Outlet } from "react-router-dom";
+import MainNavigation from '../components/MainNavigation';
 
+// Outlet은 child routes를 렌더링하기 위해 필요하다고 함
 const RootLayout = () => {
   return (
-    <h1>Layout</h1>
+    <>
+      <MainNavigation />
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
 };
 
