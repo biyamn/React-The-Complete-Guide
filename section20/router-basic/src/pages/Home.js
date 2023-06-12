@@ -7,7 +7,6 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    // 👇️ navigate programmatically
     navigate('/products');
   };
 
